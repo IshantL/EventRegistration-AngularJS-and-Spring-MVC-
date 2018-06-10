@@ -1,0 +1,41 @@
+
+<html>
+<head>
+<title>Registration</title>
+</head>
+<body>
+<h1>Registration</h1>
+<form role = "form" class="well" ng-hide="ifSearchUser">
+<div class = "form-group">
+<label for = "name"> Name:  </label>
+<input type = "text" id = "name" class = "form-control" placeholder = "Enter Name " ng-model = "newcontact.name">
+</div>
+<div class = "form-group">
+<label for = "email"> Email:  </label>
+<input type = "email" id = "email" class = "form-control" placeholder = "Enter Email " ng-model = "newcontact.email">
+</div>
+<div class = "form-group">
+<label for = "phone"> Phone:  </label>
+<input type = "text" id = "phone" class = "form-control" placeholder = "Enter Phone " ng-model = "newcontact.phone">
+</div>
+<br>
+<div class = "form-group">
+<label for = "phone"> Id Card:  </label>
+   <input type="file" fileread="uploadme" />
+    <img src="{{uploadme}}" width="100" height="50" alt="Image preview...">
+    <br/>
+<div class = "form-group">
+<label for = "phone"> Registration type:  </label>
+<select ng-model="newcontact.registrationType" ng-options="item for item in regType"></select>
+</div>
+<br>
+<div class = "form-group">
+<label for = "phone"> No of Tickets:  </label>
+<input type = "text" id = "phone" class = "form-control" placeholder = "Enter Phone " ng-model = "newcontact.noOfTickets">
+</div>
+<br>
+<input type="button" class="btn btn-primary" ng-click="saveContact(newcontact,uploadme)" class="btn btn-primary" value = "Submit">
+</form>
+
+</body>
+</html>
